@@ -1,6 +1,11 @@
 import { useForm, useWatch }                                  from "react-hook-form";
-import { FormProvider, RHFSwitch, RHFTextArea, RHFTextInput } from "components/global/hook-form";
 import { Stack }                                              from "@mantine/core";
+
+import FormProvider from "../../../components/global/hook-form/FormProvider";
+// import RHFPasswordInput from "../../../components/global/hook-form/RHFPasswordInput";
+import RHFSwitch from "../../../components/global/hook-form/RHFSwitch";
+import RHFTextArea from "../../../components/global/hook-form/RHFTextArea";
+import RHFTextInput from "../../../components/global/hook-form/RHFTextInput";
 
 const Home = () => {
 	const methods = useForm({
@@ -28,6 +33,7 @@ const Home = () => {
 				<RHFTextInput name="inpt" label="InptText" onChange={onChangeText}/>
 				<RHFTextArea name="textArea" label="TextArea" onChange={onChangeText} />
 				<RHFSwitch name="switch" label="Switch" />
+				{/* <RHFPasswordInput name="password" label="password "/> */}
 			</Stack>
 		</FormProvider>
 	);

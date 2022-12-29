@@ -15,7 +15,7 @@ interface IRHFPasswordInput extends PasswordInputProps, React.RefAttributes<HTML
 	label ?: string;
 	onChange ?: (event : React.ChangeEvent<HTMLInputElement>) => void;
 }
-
+//TODO: all inpts text test
 const RHFPasswordInput = ({
 	name,
 	label,
@@ -27,7 +27,7 @@ const RHFPasswordInput = ({
 	const { control } = useFormContext();
 
 	const getVisibilityIcon = ({ reveal, size } : { reveal : boolean; size : number }) =>
-		reveal ? <OpenedEye fontSize={size} /> : <ClosedEye fontSize={size} />;
+		reveal ? <OpenedEye fontSize={size} /> : <ClosedEye fontSize={size} />; //TODO: test this
 
 	return (
 		<Controller
@@ -50,11 +50,11 @@ const RHFPasswordInput = ({
 						visibilityToggleIcon={getVisibilityIcon}
 						label={getInptLabel(label, error?.message)}
 						classNames={{
-							invalid    : classes.invalidPassword,
-							wrapper    : error && classes.invalidWrapper,
+							icon       : classes.icon,
 							input      : classes.pswInput,
 							innerInput : classes.innerInput,
-							icon       : classes.icon,
+							invalid    : classes.invalidPassword,
+							wrapper    : error && classes.invalidWrapper,
 							label      : `${classes.label} ${error && classes.labelError}`,
 						}}
 					/>

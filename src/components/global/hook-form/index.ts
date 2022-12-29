@@ -1,4 +1,3 @@
-export { default as RHFRating }        from "./RHFRating";
 export { default as RHFSelect }        from "./RHFSelect";
 export { default as RHFSwitch }        from "./RHFSwitch";
 export { default as RHFCheckbox }      from "./RHFCheckbox";

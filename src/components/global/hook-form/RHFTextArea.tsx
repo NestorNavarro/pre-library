@@ -4,7 +4,6 @@ import { useFormContext, Controller } from "react-hook-form";
 import { Textarea, TextareaProps } from "@mantine/core";
 import { useFocusWithin }          from "@mantine/hooks";
 //Own components
-import { getInptLabel } from "helpers";
 import styles           from "./styles";
 interface RHFTextArea extends TextareaProps, React.RefAttributes<HTMLTextAreaElement> {
 	name : string;
@@ -40,7 +39,7 @@ const RHFTextArea = ({
 						error={!!error}
 						autosize={autosize}
 						onChange={handleChange}
-						label={getInptLabel(label, error?.message)}
+						label={error?.message ? error.message : label}
 						classNames={{
 							input        : classes.input,
 							invalid      : classes.invalid,

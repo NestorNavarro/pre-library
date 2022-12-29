@@ -21,7 +21,7 @@ const styles = createStyles((theme, _params ?: { focused : boolean; }, getRef?) 
 		input : {
 			fontWeight : 500,
 			"&:focus"  : {
-				backgroundColor : isDark ? rgba(primaryColors[8], 0.15) : primaryColors[0],
+				backgroundColor : isDark ? rgba(primaryColors[8], 0.15) : primaryColors?.[0],
 			},
 			"&::placeholder" : {
 				fontWeight : 400,
@@ -47,7 +47,7 @@ const styles = createStyles((theme, _params ?: { focused : boolean; }, getRef?) 
 		},
 		pswInput : {
 			"&:focus-within" : {
-				backgroundColor : isDark ? rgba(primaryColors[8], 0.15) : `${primaryColors[0]}`,
+				backgroundColor : isDark ? rgba(primaryColors[8], 0.15) : `${primaryColors?.[0]}`,
 			},
 		},
 		invalidPassword : {
