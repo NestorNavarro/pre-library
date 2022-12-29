@@ -1,0 +1,78 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "import",
+        "align-import",
+        "unused-imports",
+        "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:@typescript-eslint/eslint-recommended"
+    ],
+    "rules": {
+        "indent" : ["error","tab",{
+            "SwitchCase"   : 1,
+            "ignoredNodes" : ["TemplateLiteral"]
+		}],
+		"@typescript-eslint/no-var-requires": 0,
+		"@typescript-eslint/no-namespace"  : "off",
+		"no-mixed-spaces-and-tabs"         : ["error", "smart-tabs"],
+        "quotes"                           : ["error", "double"],
+        "semi"                             : ["error", "always"],
+        "align-import/align-import"        : "error",
+		"align-import/trim-import"         : "error",
+		"unused-imports/no-unused-imports" : "error",
+        "no-trailing-spaces"               : "error",
+        "no-var"                           : "error",
+		"prefer-const"                     : "error",
+		"no-const-assign"                  : "error",
+        "no-empty"                         : "error",
+		"prefer-template"                  : "error",
+        "comma-dangle" : [
+			"error",
+			{
+				"arrays"    : "always-multiline",
+				"objects"   : "always-multiline",
+				"imports"   : "always-multiline",
+				"exports"   : "always-multiline",
+				"functions" : "ignore"
+			}
+		],
+        "comma-spacing" : [
+			"error",
+			{
+				"before" : false,
+				"after"  : true
+			}
+		],
+        "linebreak-style" : [
+			"off",
+			"windows"
+		],
+        "eol-last" : [
+			"error",
+			"always"
+		],
+        "key-spacing" : [
+			"error",
+			{
+				"singleLine" : {
+					"beforeColon" : true,
+					"afterColon"  : true
+				},
+				"multiLine" : {
+					"align"       : "colon",
+					"beforeColon" : true,
+					"afterColon"  : true
+				}
+			}
+		],
+        "@typescript-eslint/ban-types" : "off",
+		"no-unused-vars": "off",
+ 		"@typescript-eslint/no-unused-vars": "error",
+		 "@typescript-eslint/no-explicit-any" : "off"
+    }
+}
