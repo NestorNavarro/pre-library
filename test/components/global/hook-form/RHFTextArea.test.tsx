@@ -6,9 +6,10 @@ import * as Yup                   from "yup";
 import { FormProvider, useForm }  from "react-hook-form";
 import { yupResolver }            from "@hookform/resolvers/yup";
 import { act, fireEvent, render } from "@testing-library/react";
-import RHFTextInput               from "../../../../src/components/global/hook-form/RHFTextInput";
+import RHFTextArea                from "../../../../src/components/global/hook-form/RHFTextArea";
 
-describe("RHFTextInput", () => {
+
+describe("RHFTextArea", () => {
 	test("should change value on RHK", () => {
 		const textInptName = "myInpt";
 		const value = "testVal";
@@ -22,7 +23,7 @@ describe("RHFTextInput", () => {
 
 		const { getByRole, getByDisplayValue } = render(
 			<Provider>
-				<RHFTextInput name={textInptName} />
+				<RHFTextArea name={textInptName} />
 			</Provider>
 		);
 
@@ -32,12 +33,12 @@ describe("RHFTextInput", () => {
 		expect(getByDisplayValue(value).getAttribute("name")).toBe(textInptName);
 	});
 
-	test("should change value on RHK and call the onChange prop and the onChange callback must receive the HTMLInputElement as a arg", () => {
+	test("should change value on RHK and call the onChange prop and the onChange callback must receive the HTMLTextAreaElement as a arg", () => {
 		const textInptName = "myInpt";
 		const value = "testVal";
 		let customVal = "";
 
-		const hadleOnChage = (e : React.ChangeEvent<HTMLInputElement>) => {
+		const hadleOnChage = (e : React.ChangeEvent<HTMLTextAreaElement>) => {
 			customVal = `hadleOnChage${e.target.value}`;
 		};
 
@@ -50,7 +51,7 @@ describe("RHFTextInput", () => {
 
 		const { getByRole, getByDisplayValue } = render(
 			<Provider>
-				<RHFTextInput name={textInptName} onChange={hadleOnChage}/>
+				<RHFTextArea name={textInptName} onChange={hadleOnChage}/>
 			</Provider>
 		);
 
@@ -69,7 +70,7 @@ describe("RHFTextInput", () => {
 
 		const { getByRole } = render(
 			<Provider>
-				<RHFTextInput name="test" disabled />
+				<RHFTextArea name="test" disabled />
 			</Provider>
 		);
 
@@ -102,7 +103,7 @@ describe("RHFTextInput", () => {
 
 		const { getByRole, getByLabelText } = render(
 			<Provider>
-				<RHFTextInput label="labelTest" name="test" />
+				<RHFTextArea label="labelTest" name="test" />
 			</Provider>
 		);
 
@@ -139,7 +140,7 @@ describe("RHFTextInput", () => {
 
 		const { getByRole } = render(
 			<Provider>
-				<RHFTextInput label="labelTest" name="test" />
+				<RHFTextArea label="labelTest" name="test" />
 			</Provider>
 		);
 
@@ -147,7 +148,6 @@ describe("RHFTextInput", () => {
 		const btn = getByRole("button");
 
 		await act( () => fireEvent.submit(btn));
-
-		expect(inpt.className.includes("mantine-Input-invalid mantine-TextInput-invalid")).toBeTruthy();
+		expect(inpt.className.includes("mantine-Input-invalid mantine-Textarea-invalid")).toBeTruthy();
 	});
 });

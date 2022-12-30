@@ -22,23 +22,23 @@ const RHFTextInput = ({ name, label, onChange, ...rest } :IRHFTextInput) => {
 			control={control}
 			render={({ field, fieldState: { error } }) => {
 				const handleChange = (e : React.ChangeEvent<HTMLInputElement>) => {
-					onChange && onChange(e); //TODO: Evitar que alguien elimine esto por accidente
-					field.onChange(e); //TODO: Evitar que alguien elimine esto por accidente
+					onChange && onChange(e);
+					field.onChange(e);
 				};
 				return (
 					<TextInput
 						{...field}
-						{...rest} //TODO: si yo mando la prop styles o id esperari que estas se encontraran dentro de mi inpt, sino, significa que no se está recibiendo el rest
+						{...rest}
 						ref={ref}
-						error={!!error} //TODO: validar que los estilos de los errores existan
-						onChange={handleChange} //TODO: cuando no se manda la funcion del onchange solo se esperaría que el value de hk cambie, si se mande el onchage se esperaría que el valor en hk cambie y se muestre el evento
-						label={error?.message ? error.message : label}  //TODO: Test - verificar que cuando exista un error, el label cambie.
+						error={!!error}
+						onChange={handleChange}
+						label={error?.message ? error.message : label}
 						classNames={{
 							icon    : classes.icon,
 							input   : classes.input,
 							invalid : classes.invalid,
 							wrapper : `${error && classes.invalidWrapper}`,
-							label   : `${classes.label} ${error && classes.labelError}`, //TODO: Test - verificar que cuando exista un error, el color del label.
+							label   : `${classes.label} ${error && classes.labelError}`,
 						}}
 					/>
 				);

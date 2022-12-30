@@ -8,7 +8,7 @@ interface IRHFSwitch extends SwitchProps {
 	onChange ?: (e : React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-//TODO: replicar los test del intp text - menos los de los estilos
+
 const RHFSwitch = ({ name, onChange, ...rest } : IRHFSwitch ) => {
 	const { control } = useFormContext();
 	return (

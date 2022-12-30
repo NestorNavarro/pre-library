@@ -4,14 +4,14 @@ import { useFormContext, Controller } from "react-hook-form";
 import { Textarea, TextareaProps } from "@mantine/core";
 import { useFocusWithin }          from "@mantine/hooks";
 //Own components
-import styles           from "./styles";
+import styles from "./styles";
 interface RHFTextArea extends TextareaProps, React.RefAttributes<HTMLTextAreaElement> {
 	name : string;
 	label ?: string;
 	autosize ?: boolean;
 	onChange ?: (e : React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
-//TODO: test- repiclar los test del inpt
+
 const RHFTextArea = ({
 	name,
 	onChange,
