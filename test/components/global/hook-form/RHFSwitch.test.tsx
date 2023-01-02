@@ -1,6 +1,3 @@
-/**
- * @jest-environment jsdom
- */
 import React                     from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { render, act }           from "@testing-library/react";

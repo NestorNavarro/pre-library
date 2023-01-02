@@ -1,6 +1,3 @@
-/**
- * @jest-environment jsdom
- */
 import React                      from "react";
 import * as Yup                   from "yup";
 import { FormProvider, useForm }  from "react-hook-form";
