@@ -1,21 +1,15 @@
-import React                          from "react";
-import { useFormContext, Controller } from "react-hook-form";
-//mantine
+import React                                 from "react";
+import { useFormContext, Controller }        from "react-hook-form";
 import { PasswordInput, PasswordInputProps } from "@mantine/core";
 import { useFocusWithin }                    from "@mantine/hooks";
-//icons
-import { OpenedEye, ClosedEye } from "@inprodi/icons";
-//Own components
-import getInptLabel from "../../../helpers/getInptLabel";
-//styles
-import styles from "./styles";
+import { OpenedEye, ClosedEye }              from "@inprodi/icons";
+import styles                                from "./styles";
 
 interface IRHFPasswordInput extends PasswordInputProps, React.RefAttributes<HTMLInputElement> {
 	name : string;
 	label ?: string;
 	onChange ?: (event : React.ChangeEvent<HTMLInputElement>) => void;
 }
-//TODO: all inpts text test
 const RHFPasswordInput = ({
 	name,
 	label,
@@ -26,8 +20,10 @@ const RHFPasswordInput = ({
 	const { classes } = styles({ focused });
 	const { control } = useFormContext();
 
-	const getVisibilityIcon = ({ reveal, size } : { reveal : boolean; size : number }) =>
-		reveal ? <OpenedEye fontSize={size} /> : <ClosedEye fontSize={size} />; //TODO: test this
+	const getVisibilityIcon = ({ reveal, size } : { reveal : boolean; size : number }) =>{
+		return reveal ? <OpenedEye data-testid="opened-eye" fontSize={size} />
+			: <ClosedEye data-testid="closed-eye" fontSize={size} />;
+	};
 
 	return (
 		<Controller
@@ -41,14 +37,14 @@ const RHFPasswordInput = ({
 				return (
 					<PasswordInput
 						{...field}
-						{...rest}
+						data-testid="password"
 						ref={ref}
 						error={!!error}
 						autoComplete="off"
 						onChange={handleOnChange}
 						icon={<OpenedEye fontSize={14} />}
 						visibilityToggleIcon={getVisibilityIcon}
-						label={getInptLabel(label, error?.message)}
+						label={error?.message ? error.message : label}
 						classNames={{
 							icon       : classes.icon,
 							input      : classes.pswInput,
@@ -57,6 +53,7 @@ const RHFPasswordInput = ({
 							wrapper    : error && classes.invalidWrapper,
 							label      : `${classes.label} ${error && classes.labelError}`,
 						}}
+						{...rest}
 					/>
 				);
 			}}
