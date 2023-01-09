@@ -4,9 +4,9 @@ import { useFormContext, Controller } from "react-hook-form";
 import { PasswordInput, PasswordInputProps } from "@mantine/core";
 import { useFocusWithin }                    from "@mantine/hooks";
 //icons
-import { OpenedEye, ClosedEye } from "inprodi-icons";
+import { OpenedEye, ClosedEye } from "@inprodi/icons";
 //Own components
-import { getInptLabel } from "helpers";
+import getInptLabel from "../../../helpers/getInptLabel";
 //styles
 import styles from "./styles";
 

@@ -15,7 +15,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "@inprodi/icons": ["node_modules/@inprodi/icons/dist"] // this mapping is relative to "baseUrl"
+    }
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

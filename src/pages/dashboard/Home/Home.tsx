@@ -1,10 +1,9 @@
-import { useForm, useWatch } from "react-hook-form";
-import { Stack }             from "@mantine/core";
+import { useForm }                   from "react-hook-form";
+import { Button, Stack, ActionIcon } from "@mantine/core";
+import { Accounts }                  from "@inprodi/icons";
 
-import FormProvider from "../../../components/global/hook-form/FormProvider";
-import RHFSwitch    from "../../../components/global/hook-form/RHFSwitch";
-import RHFTextArea  from "../../../components/global/hook-form/RHFTextArea";
-import RHFTextInput from "../../../components/global/hook-form/RHFTextInput";
+import { RHFTextInput, RHFTextArea, RHFSwitch, FormProvider } from "@inprodi/core";
+import { RHFPasswordInput }                                   from "components/global/hook-form";
 
 const Home = () => {
 	const methods = useForm({
@@ -13,23 +12,23 @@ const Home = () => {
 		},
 	});
 
-	const { handleSubmit, control } = methods;
+	const { handleSubmit } = methods;
 
-	const watch = useWatch({ name : "inpt", control });
-	console.log(watch);
 
 	const onSubmit = (data : {}) => console.log(data);
 
-	const onChangeText = (value : any) => {
-		console.log(value);
-	};
 
 	return (
 		<FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
 			<Stack>
-				<RHFTextInput name="inpt" label="InptText" onChange={onChangeText}/>
-				<RHFTextArea name="textArea" label="TextArea" onChange={onChangeText} />
+				<RHFTextInput name="inpt" label="InptText"/>
+				<RHFTextArea name="textArea" label="TextArea" />
+				<RHFPasswordInput name="password" label="Password"/>
 				<RHFSwitch name="switch" label="Switch" />
+				<Button type="submit">Submit</Button>
+				<ActionIcon color="primary" variant="outline">
+					<Accounts />
+				</ActionIcon>
 			</Stack>
 		</FormProvider>
 	);

@@ -23,11 +23,11 @@ const RHFSwitch = ({ name, onChange, ...rest } : IRHFSwitch ) => {
 				return (
 					<Switch
 						{...field}
-						{...rest}
 						id={name}
 						name={name}
 						checked={field.value}
 						onChange={handleChange}
+						{...rest}
 					/>
 				);
 			}}
