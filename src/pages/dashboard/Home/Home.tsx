@@ -1,9 +1,9 @@
 import { useForm }                   from "react-hook-form";
 import { Button, Stack, ActionIcon } from "@mantine/core";
-import { Accounts }                  from "@inprodi/icons";
+import { User }                  from "@inprodi/icons";
 
 import { RHFTextInput, RHFTextArea, RHFSwitch, FormProvider } from "@inprodi/core";
-import { RHFPasswordInput }                                   from "components/global/hook-form";
+import { RHFCheckbox, RHFPasswordInput }                                   from "components/global/hook-form";
 
 const Home = () => {
 	const methods = useForm({
@@ -25,10 +25,10 @@ const Home = () => {
 				<RHFTextArea name="textArea" label="TextArea" />
 				<RHFPasswordInput name="password" label="Password"/>
 				<RHFSwitch name="switch" label="Switch" />
+
+				<RHFCheckbox name="myCheck" label="check" />
+				
 				<Button type="submit">Submit</Button>
-				<ActionIcon color="primary" variant="outline">
-					<Accounts />
-				</ActionIcon>
 			</Stack>
 		</FormProvider>
 	);

@@ -12,11 +12,11 @@ const RHFCheckbox = ({ name, ...rest } : IRHFCheckbox ) => {
 		<Controller
 			name={name}
 			control={control}
-			render={({ field }) => (
+			render={({ field, fieldState: { error } }) => (
 				<Checkbox
-					id={name}
-					checked={field.value}
 					{...field}
+					checked={field.value}
+					error={!!error}
 					{...rest}
 				/>
 			)}

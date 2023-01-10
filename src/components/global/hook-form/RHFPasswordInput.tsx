@@ -5,7 +5,7 @@ import { useFocusWithin }                    from "@mantine/hooks";
 import { OpenedEye, ClosedEye }              from "@inprodi/icons";
 import styles                                from "./styles";
 
-interface IRHFPasswordInput extends PasswordInputProps, React.RefAttributes<HTMLInputElement> {
+interface RHFPasswordInputProps extends PasswordInputProps, React.RefAttributes<HTMLInputElement> {
 	name : string;
 	label ?: string;
 	onChange ?: (event : React.ChangeEvent<HTMLInputElement>) => void;
@@ -15,7 +15,7 @@ const RHFPasswordInput = ({
 	label,
 	onChange,
 	...rest
-} : IRHFPasswordInput) => {
+} : RHFPasswordInputProps) => {
 	const { ref, focused } = useFocusWithin();
 	const { classes } = styles({ focused });
 	const { control } = useFormContext();
