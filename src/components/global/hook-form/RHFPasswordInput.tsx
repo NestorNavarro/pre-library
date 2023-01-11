@@ -1,9 +1,9 @@
-import React                                 from "react";
-import { useFormContext, Controller }        from "react-hook-form";
-import { PasswordInput, PasswordInputProps } from "@mantine/core";
-import { useFocusWithin }                    from "@mantine/hooks";
-import { OpenedEye, ClosedEye }              from "@inprodi/icons";
-import styles                                from "./styles";
+import React                                  from "react";
+import { useFormContext, Controller }         from "react-hook-form";
+import { PasswordInput, PasswordInputProps }  from "@mantine/core";
+import { useFocusWithin }                     from "@mantine/hooks";
+import { OpenedEyeOutline, ClosedEyeOutline } from "@inprodi/icons";
+import styles                                 from "./styles";
 
 interface RHFPasswordInputProps extends PasswordInputProps, React.RefAttributes<HTMLInputElement> {
 	name : string;
@@ -21,8 +21,8 @@ const RHFPasswordInput = ({
 	const { control } = useFormContext();
 
 	const getVisibilityIcon = ({ reveal, size } : { reveal : boolean; size : number }) =>{
-		return reveal ? <OpenedEye data-testid="opened-eye" fontSize={size} />
-			: <ClosedEye data-testid="closed-eye" fontSize={size} />;
+		return reveal ? <OpenedEyeOutline data-testid="opened-eye" fontSize={size} />
+			: <ClosedEyeOutline data-testid="closed-eye" fontSize={size} />;
 	};
 
 	return (
@@ -42,7 +42,7 @@ const RHFPasswordInput = ({
 						error={!!error}
 						autoComplete="off"
 						onChange={handleOnChange}
-						icon={<OpenedEye fontSize={14} />}
+						icon={<OpenedEyeOutline fontSize={14} />}
 						visibilityToggleIcon={getVisibilityIcon}
 						label={error?.message ? error.message : label}
 						classNames={{

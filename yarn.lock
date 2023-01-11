@@ -1394,14 +1394,15 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@inprodi/core@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@inprodi/core/-/core-0.3.0.tgz#829b27ee2c27ee6f5be41b0b2124c238350c6932"
-  integrity sha512-pedejb1ugxvWE8u4VjELwBLRxBnLLiJ5oSHtgyuQx6SUU3wo7SrFnrDHtB4obs94+G31AP4Q7NkTl1JEktUIgw==
+"@inprodi/core@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@inprodi/core/-/core-1.0.1.tgz#f12d837c3e9d6ac1b6c0d311bfd9369495144c82"
+  integrity sha512-0ocx2+lhukJL60UV56vC24RqGze+fJrGu9Nw4bAYpdkVKRnFxLk9dQQ+9pEN05idSSJ5P8zNEb+7t28E+kAAew==
   dependencies:
     "@babel/preset-typescript" "^7.18.6"
     "@emotion/react" "^11.10.5"
     "@hookform/resolvers" "^2.9.10"
+    "@inprodi/icons" "^1.0.0"
     "@mantine/core" "^5.10.0"
     "@mantine/hooks" "^5.10.0"
     react "^18.2.0"
@@ -1409,10 +1410,15 @@
     react-hook-form "^7.41.5"
     yup "^0.32.11"
 
-"@inprodi/icons@^0.0.0":
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/@inprodi/icons/-/icons-0.0.0.tgz#3406816928e2862f0e2adee7bfa319ec5950aa86"
-  integrity sha512-1RvkFiDib8OOjhfpiRBBeViK+y5lO+t7nt08Ab70UQ1GuSdftGszrpWuzhgnYg+qNSDlwNO1J8DI8W/wMS6oeQ==
+"@inprodi/icons@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@inprodi/icons/-/icons-1.0.0.tgz#e26e18326cc9a2313cb4bdf6263a9f6ace162cb3"
+  integrity sha512-Aik4ttJJgX4bcUl6NyIlgYRYMNG8pJT+42Yx1IfVJMF7QqfdlSb6TLas3zLAQp2umkoL7dPQF0sOxqZ/qcZw2Q==
+
+"@inprodi/icons@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@inprodi/icons/-/icons-1.1.0.tgz#70ecd68e4a45a8d3b47b757523d2c4410360663d"
+  integrity sha512-Ktis8/yk/sw+bi7aLxGOgwARp0+eZc3vSo12vTX41FR4/QBRgZoiOJnxI8ZGCavso5E9MiJQgZc6W9H+b20agA==
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"

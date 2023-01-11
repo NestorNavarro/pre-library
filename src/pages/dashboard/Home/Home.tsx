@@ -1,9 +1,10 @@
 import { useForm }                   from "react-hook-form";
-import { Button, Stack, ActionIcon } from "@mantine/core";
-import { User }                  from "@inprodi/icons";
+import { ActionIcon, Button, Stack } from "@mantine/core";
 
-import { RHFTextInput, RHFTextArea, RHFSwitch, FormProvider } from "@inprodi/core";
-import { RHFCheckbox, RHFPasswordInput }                                   from "components/global/hook-form";
+import { RHFTextInput, RHFTextArea, RHFSwitch, FormProvider, RHFPasswordInput } from "@inprodi/core";
+import { UserOutline, DiamondFilled, WordColor }                                from "@inprodi/icons";
+
+import { RHFCheckbox } from "components/global/hook-form";
 
 const Home = () => {
 	const methods = useForm({
@@ -14,9 +15,7 @@ const Home = () => {
 
 	const { handleSubmit } = methods;
 
-
 	const onSubmit = (data : {}) => console.log(data);
-
 
 	return (
 		<FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
@@ -27,8 +26,18 @@ const Home = () => {
 				<RHFSwitch name="switch" label="Switch" />
 
 				<RHFCheckbox name="myCheck" label="check" />
-				
+
 				<Button type="submit">Submit</Button>
+
+				<ActionIcon color="primary" variant="subtle">
+					<UserOutline size="xl" />
+				</ActionIcon>
+				<ActionIcon color="primary" variant="subtle">
+					<DiamondFilled size="xl" />
+				</ActionIcon>
+				<ActionIcon color="primary" variant="subtle">
+					<WordColor fillOpacity={1} size="xl" />
+				</ActionIcon>
 			</Stack>
 		</FormProvider>
 	);

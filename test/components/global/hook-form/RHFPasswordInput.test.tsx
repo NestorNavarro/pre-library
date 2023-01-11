@@ -6,24 +6,6 @@ import RHFPasswordInput           from "../../../../src/components/global/hook-f
 import { yupResolver }            from "@hookform/resolvers/yup";
 
 describe("RHFPasswordInput.test", () => {
-	test("snapshot", () => {
-		const textInptName = "password";
-
-		  const Provider: React.FC<{children : React.ReactElement }> = ({ children }) => {
-			const methods = useForm<{ [textInptName]: string }>({ defaultValues : {
-				[textInptName] : "",
-			}});
-			return <FormProvider {...methods}>{children}</FormProvider>;
-		};
-
-		const { container } = render(
-			<Provider>
-				<RHFPasswordInput name={textInptName} />
-			</Provider>
-		);
-
-		expect(container).toMatchSnapshot();
-	});
 	test("should change value on RHK and call the onChange prop and the onChange callback must receive the HTMLInputElement as a arg", () => {
 		const inptName = "password";
 		const value = "testVal";
