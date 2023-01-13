@@ -17,6 +17,7 @@ const PasswordRestored    = Loadable(lazy(() => import("pages/auth/PasswordResto
 // // Dashboard
 const Form = Loadable(lazy(() => import("pages/dashboard/Form")));
 const Iconography = Loadable(lazy(() => import("pages/dashboard/Iconography")));
+const Typography = Loadable(lazy(() => import("pages/dashboard/Typography")));
 // //Erros
 const NotFound  = Loadable(lazy(() => import("pages/Page404")));
 const Forbidden = Loadable(lazy(() => import("pages/Page403")));
@@ -65,6 +66,7 @@ export default function Router() {
 				{ element : <Navigate to="/dashboard/form" replace />, index : true },
 				{ path : "form", element : <Form /> },
 				{ path : "iconography", element : <Iconography /> },
+				{ path : "typography", element : <Typography /> },
 			],
 		},
 		//Redirect

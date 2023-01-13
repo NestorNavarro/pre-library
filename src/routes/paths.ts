@@ -20,7 +20,8 @@ export const PATH_AUTH = {
 };
 
 export const PATH_DASHBOARD = {
-	root  : ROOTS_DASHBOARD,
+	root        : ROOTS_DASHBOARD,
 	iconography : path(ROOTS_DASHBOARD, "/iconography"),
-	form : path(ROOTS_DASHBOARD, "/form"),
+	form        : path(ROOTS_DASHBOARD, "/form"),
+	typography  : path(ROOTS_DASHBOARD, "/typography"),
 };

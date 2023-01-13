@@ -20,7 +20,7 @@ import {
 import { useToggle } from "@mantine/hooks";
 
 const Form = () => {
-	const [size, toggleSize] = useToggle(["lg", "md", "sm", "xs", "xl"]);
+	const [size, toggleSize] = useToggle(["xs", "sm", "md", "lg", "xl"]);
 	const schema = Yup.object().shape({
 		textinpt : Yup.string()
 			.required("El campo es requerido"),
@@ -65,31 +65,33 @@ const Form = () => {
 				<Grid gutter={45}>
 					<Grid.Col md={6}>
 						<Stack>
-							<h3>Publicados</h3>
+							<h3>@inprodi/core</h3>
 							<Grid>
 								<Grid.Col span={12}>
 									<RHFSwitch name="switch" label="Switch" size={size as MantineSize} />
 								</Grid.Col>
 								<Grid.Col md={6}>
-									<RHFTextInput name="textinpt" label="InptText" size={size as MantineSize}/>
-									<Inpt name="textinpt" label="InptText" size={size as MantineSize}/>
+									<RHFTextInput name="textinpt" label="InptText" size={size as MantineSize} />
 								</Grid.Col>
 								<Grid.Col md={6}>
-									<RHFPasswordInput name="password" label="Password" size={size as MantineSize}/>
+									<RHFPasswordInput name="password" label="Password" size={size as MantineSize} />
 								</Grid.Col>
 								<Grid.Col span={12}>
-									<RHFTextArea name="textArea" label="TextArea" size={size as MantineSize}/>
+									<RHFTextArea name="textArea" label="TextArea" size={size as MantineSize} />
 								</Grid.Col>
 							</Grid>
 							<Button type="submit">Submit</Button>
 						</Stack>
 					</Grid.Col>
 					<Grid.Col md={6}>
-						<h3>Por publicar</h3>
-						<RHFCheckbox name="checkbox" label="checkbox" size={size as MantineSize}/>
-						<RHFColorInput name="colorPicker" label="ColorPicker" size={size as MantineSize}/>
-						<RHFDatePicker name="datePicker" label="DatePicker" size={size as MantineSize}/>
-						<RHFDateRangePicker name="rangePicker" label="RangePicker" size={size as MantineSize}/>
+						<h3>Local</h3>
+						<Stack>
+							<Inpt name="textinpt" label="InptText" size={size as MantineSize}/>
+							<RHFCheckbox name="checkbox" label="checkbox" size={size as MantineSize}/>
+							<RHFColorInput name="colorPicker" label="ColorPicker" size={size as MantineSize}/>
+							<RHFDatePicker name="datePicker" label="DatePicker" size={size as MantineSize}/>
+							<RHFDateRangePicker name="rangePicker" label="RangePicker" size={size as MantineSize}/>
+						</Stack>
 					</Grid.Col>
 				</Grid>
 			</FormProvider>
