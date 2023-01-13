@@ -28,8 +28,8 @@ const styles = createStyles((theme, _params ?: { focused : boolean; }, getRef?) 
 			},
 		},
 		invalid : {
-			backgroundColor : isDark ? rgba(redColors[8], 0.15) : `${redColors[0]} !important`,
-			borderColor     : isDark ? redColors[7] : `${redColors[6]} !important`,
+			backgroundColor : isDark ? rgba(redColors[8], 0.15) : `${redColors[1]} !important`,
+			borderColor     : isDark ? redColors[7] : `${redColors[2]} !important`,
 			color           : isDark ? "#fff" : "#000",
 
 			"&::placeholder" : {
@@ -51,8 +51,8 @@ const styles = createStyles((theme, _params ?: { focused : boolean; }, getRef?) 
 			},
 		},
 		invalidPassword : {
-			backgroundColor : isDark ? rgba(redColors[8], 0.15) : `${redColors[0]} !important`,
-			borderColor     : isDark ? redColors[7] : `${redColors[6]} !important`,
+			backgroundColor : isDark ? rgba(redColors[8], 0.15) : `${redColors[1]} !important`,
+			borderColor     : isDark ? redColors[7] : `${redColors[2]} !important`,
 
 			[`& .${ getRef("innerInput") }`] : {
 				border : "none",

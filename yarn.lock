@@ -1410,12 +1410,7 @@
     react-hook-form "^7.41.5"
     yup "^0.32.11"
 
-"@inprodi/icons@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@inprodi/icons/-/icons-1.0.0.tgz#e26e18326cc9a2313cb4bdf6263a9f6ace162cb3"
-  integrity sha512-Aik4ttJJgX4bcUl6NyIlgYRYMNG8pJT+42Yx1IfVJMF7QqfdlSb6TLas3zLAQp2umkoL7dPQF0sOxqZ/qcZw2Q==
-
-"@inprodi/icons@^1.1.0":
+"@inprodi/icons@^1.0.0", "@inprodi/icons@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@inprodi/icons/-/icons-1.1.0.tgz#70ecd68e4a45a8d3b47b757523d2c4410360663d"
   integrity sha512-Ktis8/yk/sw+bi7aLxGOgwARp0+eZc3vSo12vTX41FR4/QBRgZoiOJnxI8ZGCavso5E9MiJQgZc6W9H+b20agA==

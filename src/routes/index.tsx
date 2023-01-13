@@ -5,10 +5,8 @@ import DashboardLayout from "core/layout";
 // components
 import { Loadable }   from "core/components";
 import { GuestRoute } from "components/global";
-import RoleBasedAuth  from "components/global/RoleBasedAuth";
 // ac
-import { USERS_PERMISSION } from "./roleBasedAuth";
-import AuthLayout           from "core/layout/auth/AuthLayout";
+import AuthLayout from "core/layout/auth/AuthLayout";
 
 // //Auth
 const Login         = Loadable(lazy(() => import("pages/auth/Login")));
@@ -17,10 +15,8 @@ const RecoverPassword = Loadable(lazy(() => import("pages/auth/RecoverPassword")
 const ChangePassword    = Loadable(lazy(() => import("pages/auth/ChangePassword")));
 const PasswordRestored    = Loadable(lazy(() => import("pages/auth/PasswordRestored")));
 // // Dashboard
-const Home = Loadable(lazy(() => import("pages/dashboard/Home")));
-// //users
-const UserCards   = Loadable(lazy(() => import("pages/dashboard/UserCard")));
-const UserCreate  = Loadable(lazy(() => import("pages/dashboard/UserCreate")));
+const Form = Loadable(lazy(() => import("pages/dashboard/Form")));
+const Iconography = Loadable(lazy(() => import("pages/dashboard/Iconography")));
 // //Erros
 const NotFound  = Loadable(lazy(() => import("pages/Page404")));
 const Forbidden = Loadable(lazy(() => import("pages/Page403")));
@@ -64,35 +60,17 @@ export default function Router() {
 		//Auth DashBoard
 		{
 			path     : "dashboard",
-			// element  : <PrivateRoute component={DashboardLayout} />,
 			element  : <DashboardLayout />,
 			children : [
-				{ element : <Navigate to="/dashboard/home" replace />, index : true },
-				{ path : "home", element : <Home /> },
-				{
-					path     : "user",
-					children : [
-						{ element : <Navigate to="/dashboard/user/cards" replace />, index : true },
-						{
-							path    : "cards",
-							element : <RoleBasedAuth component={UserCards} requiredRoles={USERS_PERMISSION.cards} />,
-						},
-						{
-							path    : "new",
-							element : <RoleBasedAuth component={UserCreate} requiredRoles={USERS_PERMISSION.new} />,
-						},
-						{
-							path    : "edit/:id",
-							element : <RoleBasedAuth component={UserCreate} requiredRoles={USERS_PERMISSION.edit} />,
-						},
-					],
-				},
+				{ element : <Navigate to="/dashboard/form" replace />, index : true },
+				{ path : "form", element : <Form /> },
+				{ path : "iconography", element : <Iconography /> },
 			],
 		},
 		//Redirect
 		{
 			path    : "/",
-			element : <Navigate to={"dashboard/home"} replace />,
+			element : <Navigate to={"dashboard/form"} replace />,
 		},
 		{
 			path     : "*",
