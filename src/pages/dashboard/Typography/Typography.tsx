@@ -1,19 +1,17 @@
-import { Link as RouterLink, RelativeRoutingType } from "react-router-dom";
-
+import { useNavigate }     from "react-router-dom";
+import { CirclesOutline }  from "@inprodi/icons";
 import {
 	Grid,
 	Card,
 	Text,
 	Stack,
-	TitleProps,
-	StackProps,
-	TextProps,
 	TitleOrder,
 	MantineNumberSize,
-	DefaultMantineColor,
 	Title as MantineTitle,
 } from "@mantine/core";
-import { useNavigate } from "react-router-dom";
+
+import { TextGroup }                                from "components/Typography";
+import { LinkProps, TitleAndTextProps, TitleProps } from "./interfaces";
 
 
 const Typography = () => {
@@ -33,8 +31,8 @@ const Typography = () => {
 			</Grid.Col>
 			<Grid.Col md={6}>
 				<Card h={"100%"}>
-					<Text size="xl" >Text xl</Text>
 					<Stack>
+						<Text size="xl">Text xl</Text>
 						<Text size="lg">Text lg</Text>
 						<Text size="md">Text md</Text>
 						<Text size="sm">Text sm</Text>
@@ -58,16 +56,58 @@ const Typography = () => {
 					</Link>
 				</Card>
 			</Grid.Col>
-			<RouterLink to={"/"} ></RouterLink>
+			<Grid.Col md={6}>
+				<Card h={"100%"}>
+					<Stack>
+						<TextGroup leftIcon={<CirclesOutline />}>Text Icon</TextGroup>
+						<TextGroup color="blue" rightIcon={<CirclesOutline />}>Text Icon -  Color blue</TextGroup>
+						<TextGroup
+							color="red"
+							leftIcon={<CirclesOutline color="#BE4BDB"/>}
+							rightIcon={<CirclesOutline color="#9775FA" />}
+						>
+							Text Icon - Custmos colors
+						</TextGroup>
+						<TextGroup
+							wrapperProps={{
+								p         : 15,
+								gap       : 10,
+								align     : "center",
+								justify   : "end",
+								bg        : "dark",
+								direction : "column",
+							}}
+							leftIcon={<CirclesOutline />}
+							rightIcon={<CirclesOutline />}
+						>
+							Text Icon - wrapperConfig
+						</TextGroup>
+					</Stack>
+				</Card>
+			</Grid.Col>
 		</Grid>
 	);
 };
 
-const Title = ({children, ...rest} : TitleProps) => {
+
+
+const Title = ({children, size = "md", color, ...rest} : TitleProps) => {
+	const getOrderTitle = () => {
+		const orders = {
+			"xl" : 2,
+			"lg" : 3,
+			"md" : 4,
+			"sm" : 5,
+			"xs" : 6,
+		} as { [key in MantineNumberSize] : TitleOrder };
+		return orders[size];
+	};
 	return (
 		<MantineTitle
+			order={getOrderTitle()}
 			sx={(theme) => ({
-				color : theme.colorScheme === "dark" ? "#fff" : "#000",
+				color : color ?
+					color : theme.colorScheme === "dark" ? "#fff" : "#000",
 			})}
 			{...rest}
 		>
@@ -75,15 +115,6 @@ const Title = ({children, ...rest} : TitleProps) => {
 		</MantineTitle>
 	);
 };
-
-interface LinkProps extends TextProps {
-    to : string;
-    state ?: any;
-    replace ?: boolean;
-    preventScrollReset ?: boolean;
-    relative ?: RelativeRoutingType;
-    onClick ?: React.MouseEventHandler<HTMLDivElement>
-}
 
 const Link = ({
 	to,
@@ -109,22 +140,13 @@ const Link = ({
 			style={{
 				cursor         : "pointer",
 				textDecoration : "underline",
+				width          : "fit-content",
 			}}
 		>
 			{children}
 		</Text>
 	);
 };
-
-interface TitleAndTextProps extends StackProps {
-    text : string;
-    title : string;
-    size ?: MantineNumberSize;
-    titleColor ?: DefaultMantineColor;
-    textColor ?: DefaultMantineColor;
-    titleProps ?: TitleProps;
-    textProps ?: TextProps;
-}
 
 const TitleAndText = ({
 	text,
@@ -136,19 +158,10 @@ const TitleAndText = ({
 	size = "md",
 	...rest
 } : TitleAndTextProps) => {
-	const getOrder = () => {
-		const orders = {
-			"xl" : 2,
-			"lg" : 3,
-			"md" : 4,
-			"sm" : 5,
-			"xs" : 6,
-		} as { [key in MantineNumberSize] : TitleOrder };
-		return orders[size];
-	};
+
 	return (
 		<Stack spacing={0} {...rest}>
-			<Title order={getOrder()} color={titleColor} {...titleProps}>{title}</Title>
+			<Title size={size} color={titleColor} {...titleProps}>{title}</Title>
 			<Text size={size} color={textColor} {...textProps}>{text}</Text>
 		</Stack>
 	);
