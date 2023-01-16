@@ -1,18 +1,11 @@
-import { useNavigate }     from "react-router-dom";
-import { CirclesOutline }  from "@inprodi/icons";
+import { CirclesOutline } from "@inprodi/icons";
 import {
 	Grid,
 	Card,
 	Text,
 	Stack,
-	TitleOrder,
-	MantineNumberSize,
-	Title as MantineTitle,
 } from "@mantine/core";
-
-import { TextGroup }                                from "components/Typography";
-import { LinkProps, TitleAndTextProps, TitleProps } from "./interfaces";
-
+import { Link, TextGroup, Title, TitleGroup } from "components/Typography";
 
 const Typography = () => {
 	return (
@@ -42,7 +35,7 @@ const Typography = () => {
 			</Grid.Col>
 			<Grid.Col md={6}>
 				<Card h={"100%"}>
-					<TitleAndText
+					<TitleGroup
 						size="lg"
 						title="This is a Title"
 						text="This is the complementary text for the title"
@@ -72,10 +65,10 @@ const Typography = () => {
 							wrapperProps={{
 								p         : 15,
 								gap       : 10,
-								align     : "center",
 								justify   : "end",
 								bg        : "dark",
 								direction : "column",
+								align     : "center",
 							}}
 							leftIcon={<CirclesOutline />}
 							rightIcon={<CirclesOutline />}
@@ -86,84 +79,6 @@ const Typography = () => {
 				</Card>
 			</Grid.Col>
 		</Grid>
-	);
-};
-
-
-
-const Title = ({children, size = "md", color, ...rest} : TitleProps) => {
-	const getOrderTitle = () => {
-		const orders = {
-			"xl" : 2,
-			"lg" : 3,
-			"md" : 4,
-			"sm" : 5,
-			"xs" : 6,
-		} as { [key in MantineNumberSize] : TitleOrder };
-		return orders[size];
-	};
-	return (
-		<MantineTitle
-			order={getOrderTitle()}
-			sx={(theme) => ({
-				color : color ?
-					color : theme.colorScheme === "dark" ? "#fff" : "#000",
-			})}
-			{...rest}
-		>
-			{children}
-		</MantineTitle>
-	);
-};
-
-const Link = ({
-	to,
-	state,
-	replace,
-	children,
-	relative,
-	preventScrollReset,
-	color = "blue",
-	onClick,
-	...rest
-} : LinkProps) => {
-	const navigate  = useNavigate();
-	const handleOnClick = (e : React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-		navigate(to, { relative, replace, preventScrollReset, state });
-		onClick && onClick(e);
-	};
-	return (
-		<Text
-			{...rest}
-			color={color}
-			onClick={handleOnClick}
-			style={{
-				cursor         : "pointer",
-				textDecoration : "underline",
-				width          : "fit-content",
-			}}
-		>
-			{children}
-		</Text>
-	);
-};
-
-const TitleAndText = ({
-	text,
-	title,
-	textColor,
-	titleColor,
-	titleProps,
-	textProps,
-	size = "md",
-	...rest
-} : TitleAndTextProps) => {
-
-	return (
-		<Stack spacing={0} {...rest}>
-			<Title size={size} color={titleColor} {...titleProps}>{title}</Title>
-			<Text size={size} color={textColor} {...textProps}>{text}</Text>
-		</Stack>
 	);
 };
 
