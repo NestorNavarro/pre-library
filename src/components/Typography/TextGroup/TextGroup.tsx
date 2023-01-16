@@ -19,6 +19,7 @@ export const TextGroup = ({
 	const { classes } = useStyles({ color });
 	return (
 		<Flex
+			data-testid="text-group-flex"
 			gap={20}
 			align="center"
 			className={classes.root}
@@ -26,6 +27,7 @@ export const TextGroup = ({
 		>
 			{leftIcon && leftIcon}
 			<Text
+				data-testid="text-group-text"
 				color={color}
 				{...rest}
 			>
