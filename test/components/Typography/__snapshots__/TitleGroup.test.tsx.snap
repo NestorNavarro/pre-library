@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TitleGroup snapshot 1`] = `
+<div>
+  <div
+    class="mantine-Stack-root mantine-1fod3h5"
+    data-testid="stack-group-stack"
+  >
+    <h1
+      class="mantine-Text-root mantine-Title-root mantine-73tske"
+      data-testid="title-group-stack"
+    >
+      Title
+    </h1>
+    <div
+      class="mantine-Text-root mantine-qls5vf"
+      data-testid="text-group-stack"
+    >
+      text
+    </div>
+  </div>
+</div>
+`;

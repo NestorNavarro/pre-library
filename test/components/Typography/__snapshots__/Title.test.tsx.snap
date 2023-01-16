@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title should snapshot 1`] = `
+<div>
+  <h4
+    class="mantine-Text-root mantine-Title-root mantine-cmra41"
+  >
+    My title
+  </h4>
+</div>
+`;

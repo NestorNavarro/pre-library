@@ -1,14 +1,13 @@
 import React      from "react";
 import { render } from "@testing-library/react";
-import { Title }  from "../../../../src/components/Typography";
+import { Title }  from "../../../src/components/Typography";
 
 describe("Title", () => {
 	test("should snapshot", () => {
-		const { getByRole } = render(
+		const { container } = render(
 			<Title>My title</Title>
 		);
-		const title = getByRole("heading");
-		expect(title).toMatchSnapshot();
+		expect(container).toMatchSnapshot();
 	});
 	test("should h1 order", () => {
 		const { getByRole } = render(

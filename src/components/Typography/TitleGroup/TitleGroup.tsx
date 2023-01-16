@@ -28,9 +28,9 @@ export const TitleGroup = ({
 	...rest
 } : TitleGroupProps) => {
 	return (
-		<Stack spacing={0} {...rest}>
-			<Title size={size} color={titleColor} {...titleProps}>{title}</Title>
-			<Text size={size} color={textColor} {...textProps}>{text}</Text>
+		<Stack data-testid="stack-group-stack" spacing={0} {...rest}>
+			<Title data-testid="title-group-stack" size={size} color={titleColor} {...titleProps}>{title}</Title>
+			<Text data-testid="text-group-stack" size={size} color={textColor} {...textProps}>{text}</Text>
 		</Stack>
 	);
 };

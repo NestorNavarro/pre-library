@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Links snapshot 1`] = `
+<div>
+  <div
+    class="mantine-Text-root mantine-1mra59x"
+    style="cursor: pointer; text-decoration: underline;"
+  >
+    Path Label
+  </div>
+</div>
+`;
