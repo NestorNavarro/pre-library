@@ -13,6 +13,7 @@ interface RHFPasswordInputProps extends PasswordInputProps, React.RefAttributes<
 const RHFPasswordInput = ({
 	name,
 	label,
+	size,
 	onChange,
 	...rest
 } : RHFPasswordInputProps) => {
@@ -21,8 +22,8 @@ const RHFPasswordInput = ({
 	const { control } = useFormContext();
 
 	const getVisibilityIcon = ({ reveal, size } : { reveal : boolean; size : number }) =>{
-		return reveal ? <OpenedEyeOutline data-testid="opened-eye" fontSize={size} />
-			: <ClosedEyeOutline data-testid="closed-eye" fontSize={size} />;
+		return reveal ? <OpenedEyeOutline data-testid="opened-eye" size={size} />
+			: <ClosedEyeOutline data-testid="closed-eye" size={size} />;
 	};
 
 	return (
@@ -39,10 +40,11 @@ const RHFPasswordInput = ({
 						{...field}
 						data-testid="password"
 						ref={ref}
+						size={size}
 						error={!!error}
 						autoComplete="off"
 						onChange={handleOnChange}
-						icon={<OpenedEyeOutline fontSize={14} />}
+						icon={<OpenedEyeOutline size={size}/>}
 						visibilityToggleIcon={getVisibilityIcon}
 						label={error?.message ? error.message : label}
 						classNames={{

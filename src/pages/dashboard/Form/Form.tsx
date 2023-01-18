@@ -1,17 +1,20 @@
-import * as Yup                                                 from "yup";
-import { useForm }                                              from "react-hook-form";
-import { yupResolver }                                          from "@hookform/resolvers/yup";
-import { Box, Button, Grid, Group, MantineSize, Stack, Avatar } from "@mantine/core";
+import * as Yup        from "yup";
+import { useForm }     from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import {
+	Box, Button, Grid, Group, MantineSize,
+	Stack, Avatar,
+} from "@mantine/core";
 
 import {
-	RHFTextInput,
+	// RHFTextInput,
 	RHFTextArea,
 	RHFSwitch,
 	FormProvider,
-	RHFPasswordInput,
 } from "@inprodi/core";
 import {
-	RHFTextInput as Inpt,
+	RHFPasswordInput,
+	RHFTextInput,
 	RHFCheckbox,
 	RHFColorInput,
 	RHFDatePicker,
@@ -71,10 +74,23 @@ const Form = () => {
 									<RHFSwitch name="switch" label="Switch" size={size as MantineSize} />
 								</Grid.Col>
 								<Grid.Col md={6}>
-									<RHFTextInput name="textinpt" label="InptText" size={size as MantineSize} />
+									<RHFTextInput
+										name="textinpt"
+										label="Name"
+										help="Ayuda"
+										placeholder="Placeholder"
+										size={size as MantineSize}
+									/>
+									<RHFTextInput
+										name="textinpt2"
+										label="Name"
+										placeholder="placeholder"
+										size={size as MantineSize}
+										help="Ayuda sjdkhhjksdhjkfhjsgdahjgfdsahjghjgksdahg hjsdgghjsdghjf sgdfhjsadgfhjsa df sahjdfghjsadfg sajhdf hsjadfghjsad hjfdsgjhfgdshj fhjsadfgsdhagfhjsdagfhjsdagjhf ashdgf"
+									/>
 								</Grid.Col>
 								<Grid.Col md={6}>
-									<RHFPasswordInput name="password" label="Password" size={size as MantineSize} />
+									<RHFPasswordInput name="password" label="Password" placeholder="placeholder" size={size as MantineSize} />
 								</Grid.Col>
 								<Grid.Col span={12}>
 									<RHFTextArea name="textArea" label="TextArea" size={size as MantineSize} />
@@ -86,7 +102,6 @@ const Form = () => {
 					<Grid.Col md={6}>
 						<h3>Local</h3>
 						<Stack>
-							<Inpt name="textinpt" label="InptText" size={size as MantineSize}/>
 							<RHFCheckbox name="checkbox" label="checkbox" size={size as MantineSize}/>
 							<RHFColorInput name="colorPicker" label="ColorPicker" size={size as MantineSize}/>
 							<RHFDatePicker name="datePicker" label="DatePicker" size={size as MantineSize}/>
