@@ -1394,26 +1394,32 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@inprodi/core@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@inprodi/core/-/core-1.0.1.tgz#f12d837c3e9d6ac1b6c0d311bfd9369495144c82"
-  integrity sha512-0ocx2+lhukJL60UV56vC24RqGze+fJrGu9Nw4bAYpdkVKRnFxLk9dQQ+9pEN05idSSJ5P8zNEb+7t28E+kAAew==
+"@inprodi/core@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@inprodi/core/-/core-2.0.1.tgz#a32a9ecea64a0ab4e94df1d2e5a078ad1fb27c39"
+  integrity sha512-pN/mFVfGZLwUbChkrHNAJpralpIWk0bbgn35hn3pT4xtb6CoXjYdC75O2WUCv9KiyVlqMVANr4qDApdJ0T0jVg==
   dependencies:
     "@babel/preset-typescript" "^7.18.6"
     "@emotion/react" "^11.10.5"
     "@hookform/resolvers" "^2.9.10"
-    "@inprodi/icons" "^1.0.0"
+    "@inprodi/icons" "^2.0.0"
     "@mantine/core" "^5.10.0"
     "@mantine/hooks" "^5.10.0"
     react "^18.2.0"
     react-dom "^18.2.0"
     react-hook-form "^7.41.5"
+    react-router-dom "^6.6.2"
     yup "^0.32.11"
 
-"@inprodi/icons@^1.0.0", "@inprodi/icons@^1.1.0":
+"@inprodi/icons@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@inprodi/icons/-/icons-1.1.0.tgz#70ecd68e4a45a8d3b47b757523d2c4410360663d"
   integrity sha512-Ktis8/yk/sw+bi7aLxGOgwARp0+eZc3vSo12vTX41FR4/QBRgZoiOJnxI8ZGCavso5E9MiJQgZc6W9H+b20agA==
+
+"@inprodi/icons@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@inprodi/icons/-/icons-2.0.0.tgz#febd466762924d0d06e5e1cdcf37d59c54b8882c"
+  integrity sha512-X0Xz/sUvKoCLrdoocK4qInJ9fvHHaHQ1V2+IlM4ztVPGbhYT+RcqEeAqYG8q3V8OdLRMgH4yNBZID+oGFbI9HA==
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
@@ -1877,10 +1883,10 @@
     redux-thunk "^2.4.1"
     reselect "^4.1.5"
 
-"@remix-run/router@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.0.0.tgz#a2189335a5f6428aa904ccc291988567018b6e01"
-  integrity sha512-SCR1cxRSMNKjaVYptCzBApPDqGwa3FGdjVHc+rOToocNPHQdIYLZBfv/3f+KvYuXDkUGVIW9IAzmPNZDRL1I4A==
+"@remix-run/router@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.2.1.tgz#812edd4104a15a493dda1ccac0b352270d7a188c"
+  integrity sha512-XiY0IsyHR+DXYS5vBxpoBe/8veTeoRpMHP+vDosLZxL5bnpetzI0igkxkLZS235ldLzyfkxF+2divEwWHP3vMQ==
 
 "@sinclair/typebox@^0.24.1":
   version "0.24.51"
@@ -5125,19 +5131,20 @@ react-refresh@^0.14.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.14.0.tgz#4e02825378a5f227079554d4284889354e5f553e"
   integrity sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==
 
-react-router-dom@^6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.4.0.tgz#a7d7c394c9e730b045cdd4f5d6c2d1ccb9e26947"
-  integrity sha512-4Aw1xmXKeleYYQ3x0Lcl2undHR6yMjXZjd9DKZd53SGOYqirrUThyUb0wwAX5VZAyvSuzjNJmZlJ3rR9+/vzqg==
+react-router-dom@^6.6.2:
+  version "6.6.2"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.6.2.tgz#bbf1f9b45855b218d22fc2d294b79408a084740a"
+  integrity sha512-6SCDXxRQqW5af8ImOqKza7icmQ47/EMbz572uFjzvcArg3lZ+04PxSPp8qGs+p2Y+q+b+S/AjXv8m8dyLndIIA==
   dependencies:
-    react-router "6.4.0"
+    "@remix-run/router" "1.2.1"
+    react-router "6.6.2"
 
-react-router@6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.4.0.tgz#68449c23dc893fc7a57db068c19987be1de72edb"
-  integrity sha512-B+5bEXFlgR1XUdHYR6P94g299SjrfCBMmEDJNcFbpAyRH1j1748yt9NdDhW3++nw1lk3zQJ6aOO66zUx3KlTZg==
+react-router@6.6.2:
+  version "6.6.2"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.6.2.tgz#556f7b56cff7fe32c5c02429fef3fcb2ecd08111"
+  integrity sha512-uJPG55Pek3orClbURDvfljhqFvMgJRo59Pktywkk8hUUkTY2aRfza8Yhl/vZQXs+TNQyr6tu+uqz/fLxPICOGQ==
   dependencies:
-    "@remix-run/router" "1.0.0"
+    "@remix-run/router" "1.2.1"
 
 react-select@^5.7.0:
   version "5.7.0"

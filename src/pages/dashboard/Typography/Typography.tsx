@@ -5,7 +5,7 @@ import {
 	Text,
 	Stack,
 } from "@mantine/core";
-import { Link, TextGroup, Title, TitleGroup } from "components/Typography";
+import { Link, TextGroup, Title, TitleGroup } from "@inprodi/core";
 
 const Typography = () => {
 	return (
