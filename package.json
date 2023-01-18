@@ -26,6 +26,7 @@
     "@mantine/notifications": "5.5.5",
     "@mantine/rte": "5.5.5",
     "@reduxjs/toolkit": "^1.8.5",
+    "babel-plugin-transform-import-meta": "^2.2.0",
     "dayjs": "^1.11.7",
     "fs": "^0.0.1-security",
     "inprodi-icons": "^1.4.0",

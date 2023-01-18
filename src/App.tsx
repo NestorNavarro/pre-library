@@ -3,10 +3,10 @@ import { BrowserRouter } from "react-router-dom";
 import { PersistGate }   from "redux-persist/integration/react";
 
 
-import { theme }            from "theme";
-import store, { persistor } from "store";
-import Router               from "routes";
-import { MantineProvider }  from "core/components";
+import { theme }            from "./theme";
+import store, { persistor } from "./store";
+import Router               from "./routes";
+import { MantineProvider }  from "./core/components";
 
 export default function App() {
 	return (

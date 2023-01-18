@@ -3,9 +3,9 @@ import { BaseQueryApi }                     from "@reduxjs/toolkit/dist/query/ba
 import { createApi, fetchBaseQuery, retry } from "@reduxjs/toolkit/query/react";
 
 // Import Own Components
-import { apiUrl }         from "helpers";
-import {  clearUserData } from "store/slice/authSlice";
-import { ISlices }        from "store/slice/slice.interface";
+import { apiUrl }         from "../../helpers";
+import {  clearUserData } from "../../store/slice/authSlice";
+import { ISlices }        from "../../store/slice/slice.interface";
 
 // Injects token in every request
 const baseQuery = fetchBaseQuery({

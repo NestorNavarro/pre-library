@@ -17,8 +17,9 @@ import {
 } from "redux-persist";
 
 // Import Own Components
-import { api }     from "./api";
-import * as Slices from "./slice";
+import { api }         from "./api";
+import * as Slices     from "./slice";
+import { ENVIRONMENT } from "./../constants";
 
 const rootReducer    = combineReducers({
 	...Object.entries(Slices).reduce(
@@ -45,7 +46,7 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
 	reducer    : persistedReducer,
-	devTools   : import.meta.env.DEV,
+	devTools   : ENVIRONMENT === "development",
 	middleware : (getDefaultMiddleware) =>
 		getDefaultMiddleware({
 			serializableCheck : {

@@ -1,0 +1,258 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typography should render the Typography 1`] = `
+<div>
+  <div
+    class="mantine-Grid-root mantine-nsdj"
+  >
+    <div
+      class="mantine-Grid-col mantine-jrv96d"
+    >
+      <div
+        class="mantine-Paper-root mantine-Card-root mantine-xoj88x"
+      >
+        <div
+          class="mantine-Stack-root mantine-lfk3cq"
+        >
+          <h1
+            class="mantine-Text-root mantine-Title-root mantine-jlmqon"
+          >
+            This is h1 title
+          </h1>
+          <h2
+            class="mantine-Text-root mantine-Title-root mantine-ov48gi"
+          >
+            This is h2 title
+          </h2>
+          <h3
+            class="mantine-Text-root mantine-Title-root mantine-29jld9"
+          >
+            This is h3 title
+          </h3>
+          <h4
+            class="mantine-Text-root mantine-Title-root mantine-cmra41"
+          >
+            This is h4 title
+          </h4>
+          <h5
+            class="mantine-Text-root mantine-Title-root mantine-1gk8955"
+          >
+            This is h5 title
+          </h5>
+          <h6
+            class="mantine-Text-root mantine-Title-root mantine-98z1if"
+          >
+            This is h6 title
+          </h6>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mantine-Grid-col mantine-jrv96d"
+    >
+      <div
+        class="mantine-Paper-root mantine-Card-root mantine-18ulel5"
+      >
+        <div
+          class="mantine-Stack-root mantine-lfk3cq"
+        >
+          <div
+            class="mantine-Text-root mantine-1k3aqg4"
+          >
+            Text xl
+          </div>
+          <div
+            class="mantine-Text-root mantine-1ic9apo"
+          >
+            Text lg
+          </div>
+          <div
+            class="mantine-Text-root mantine-qls5vf"
+          >
+            Text md
+          </div>
+          <div
+            class="mantine-Text-root mantine-2qa0ve"
+          >
+            Text sm
+          </div>
+          <div
+            class="mantine-Text-root mantine-1f83q5f"
+          >
+            Text xs
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mantine-Grid-col mantine-jrv96d"
+    >
+      <div
+        class="mantine-Paper-root mantine-Card-root mantine-18ulel5"
+      >
+        <div
+          class="mantine-Stack-root mantine-1fod3h5"
+          data-testid="stack-group-stack"
+        >
+          <h3
+            class="mantine-Text-root mantine-Title-root mantine-29jld9"
+            data-testid="title-group-stack"
+          >
+            This is a Title
+          </h3>
+          <div
+            class="mantine-Text-root mantine-1ic9apo"
+            data-testid="text-group-stack"
+          >
+            This is the complementary text for the title
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mantine-Grid-col mantine-jrv96d"
+    >
+      <div
+        class="mantine-Paper-root mantine-Card-root mantine-18ulel5"
+      >
+        <div
+          class="mantine-Text-root mantine-10unbch"
+          style="cursor: pointer; text-decoration: underline;"
+        >
+          Route
+        </div>
+      </div>
+    </div>
+    <div
+      class="mantine-Grid-col mantine-jrv96d"
+    >
+      <div
+        class="mantine-Paper-root mantine-Card-root mantine-18ulel5"
+      >
+        <div
+          class="mantine-Stack-root mantine-lfk3cq"
+        >
+          <div
+            class="mantine-zyyu8x"
+            data-testid="text-group-flex"
+          >
+            <svg
+              fill="none"
+              height="16"
+              viewBox="0 0 14 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 .774c-3.86 0-7 3.14-7 7s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7Zm0 1.05a5.942 5.942 0 0 1 5.95 5.95A5.942 5.942 0 0 1 7 13.724a5.942 5.942 0 0 1-5.95-5.95A5.942 5.942 0 0 1 7 1.824Zm0 2.8a3.158 3.158 0 0 0-3.15 3.15A3.158 3.158 0 0 0 7 10.924a3.158 3.158 0 0 0 3.15-3.15A3.158 3.158 0 0 0 7 4.624Zm0 1.05c1.166 0 2.1.934 2.1 2.1s-.934 2.1-2.1 2.1-2.1-.934-2.1-2.1.934-2.1 2.1-2.1Z"
+                fill="currentColor"
+              />
+            </svg>
+            <div
+              class="mantine-Text-root mantine-1pbxw0k"
+              data-testid="text-group-text"
+            >
+              Text Icon
+            </div>
+          </div>
+          <div
+            class="mantine-agnh8b"
+            data-testid="text-group-flex"
+          >
+            <div
+              class="mantine-Text-root mantine-1mra59x"
+              data-testid="text-group-text"
+            >
+              Text Icon -  Color blue
+            </div>
+            <svg
+              fill="none"
+              height="16"
+              viewBox="0 0 14 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 .774c-3.86 0-7 3.14-7 7s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7Zm0 1.05a5.942 5.942 0 0 1 5.95 5.95A5.942 5.942 0 0 1 7 13.724a5.942 5.942 0 0 1-5.95-5.95A5.942 5.942 0 0 1 7 1.824Zm0 2.8a3.158 3.158 0 0 0-3.15 3.15A3.158 3.158 0 0 0 7 10.924a3.158 3.158 0 0 0 3.15-3.15A3.158 3.158 0 0 0 7 4.624Zm0 1.05c1.166 0 2.1.934 2.1 2.1s-.934 2.1-2.1 2.1-2.1-.934-2.1-2.1.934-2.1 2.1-2.1Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <div
+            class="mantine-1kig0lv"
+            data-testid="text-group-flex"
+          >
+            <svg
+              color="#BE4BDB"
+              fill="none"
+              height="16"
+              viewBox="0 0 14 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 .774c-3.86 0-7 3.14-7 7s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7Zm0 1.05a5.942 5.942 0 0 1 5.95 5.95A5.942 5.942 0 0 1 7 13.724a5.942 5.942 0 0 1-5.95-5.95A5.942 5.942 0 0 1 7 1.824Zm0 2.8a3.158 3.158 0 0 0-3.15 3.15A3.158 3.158 0 0 0 7 10.924a3.158 3.158 0 0 0 3.15-3.15A3.158 3.158 0 0 0 7 4.624Zm0 1.05c1.166 0 2.1.934 2.1 2.1s-.934 2.1-2.1 2.1-2.1-.934-2.1-2.1.934-2.1 2.1-2.1Z"
+                fill="#BE4BDB"
+              />
+            </svg>
+            <div
+              class="mantine-Text-root mantine-1pvdmd5"
+              data-testid="text-group-text"
+            >
+              Text Icon - Custmos colors
+            </div>
+            <svg
+              color="#9775FA"
+              fill="none"
+              height="16"
+              viewBox="0 0 14 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 .774c-3.86 0-7 3.14-7 7s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7Zm0 1.05a5.942 5.942 0 0 1 5.95 5.95A5.942 5.942 0 0 1 7 13.724a5.942 5.942 0 0 1-5.95-5.95A5.942 5.942 0 0 1 7 1.824Zm0 2.8a3.158 3.158 0 0 0-3.15 3.15A3.158 3.158 0 0 0 7 10.924a3.158 3.158 0 0 0 3.15-3.15A3.158 3.158 0 0 0 7 4.624Zm0 1.05c1.166 0 2.1.934 2.1 2.1s-.934 2.1-2.1 2.1-2.1-.934-2.1-2.1.934-2.1 2.1-2.1Z"
+                fill="#9775FA"
+              />
+            </svg>
+          </div>
+          <div
+            class="mantine-18chhzw"
+            data-testid="text-group-flex"
+          >
+            <svg
+              fill="none"
+              height="16"
+              viewBox="0 0 14 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 .774c-3.86 0-7 3.14-7 7s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7Zm0 1.05a5.942 5.942 0 0 1 5.95 5.95A5.942 5.942 0 0 1 7 13.724a5.942 5.942 0 0 1-5.95-5.95A5.942 5.942 0 0 1 7 1.824Zm0 2.8a3.158 3.158 0 0 0-3.15 3.15A3.158 3.158 0 0 0 7 10.924a3.158 3.158 0 0 0 3.15-3.15A3.158 3.158 0 0 0 7 4.624Zm0 1.05c1.166 0 2.1.934 2.1 2.1s-.934 2.1-2.1 2.1-2.1-.934-2.1-2.1.934-2.1 2.1-2.1Z"
+                fill="currentColor"
+              />
+            </svg>
+            <div
+              class="mantine-Text-root mantine-1pbxw0k"
+              data-testid="text-group-text"
+            >
+              Text Icon - wrapperConfig
+            </div>
+            <svg
+              fill="none"
+              height="16"
+              viewBox="0 0 14 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 .774c-3.86 0-7 3.14-7 7s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7Zm0 1.05a5.942 5.942 0 0 1 5.95 5.95A5.942 5.942 0 0 1 7 13.724a5.942 5.942 0 0 1-5.95-5.95A5.942 5.942 0 0 1 7 1.824Zm0 2.8a3.158 3.158 0 0 0-3.15 3.15A3.158 3.158 0 0 0 7 10.924a3.158 3.158 0 0 0 3.15-3.15A3.158 3.158 0 0 0 7 4.624Zm0 1.05c1.166 0 2.1.934 2.1 2.1s-.934 2.1-2.1 2.1-2.1-.934-2.1-2.1.934-2.1 2.1-2.1Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
