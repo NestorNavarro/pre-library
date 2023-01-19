@@ -1,39 +1,44 @@
-import { ReactNode }                  from "react";
-import { HelpOutline }                from "@inprodi/icons";
-import {
-	ActionIcon, Text,
-	Tooltip, Flex, MantineNumberSize,
-} from "@mantine/core";
+import { ReactNode }                           from "react";
+import { Flex, FlexProps, Input, MantineSize } from "@mantine/core";
+import HelpTooltip, { HelpTooltipProps }       from "./HelpTooltip";
 
-interface InputHelpLabelProps {
-    label : ReactNode;
+export interface InputHelpLabelProps extends Omit<HelpTooltipProps, "helpLabel"> {
+	label : ReactNode;
+    size ?: MantineSize;
+	required ?: boolean;
     helpLabel ?: ReactNode;
-    size ?: MantineNumberSize;
+	flexProps ?: FlexProps;
 }
 
 export const InputHelpLabel = ({
 	size,
 	label,
+	required,
+	flexProps,
 	helpLabel,
+	toolTipProps,
+	actionIconProps,
 } : InputHelpLabelProps) => {
 	return (
 		<>
 			{
 				helpLabel ?
-					<Flex justify="space-between" align="center" w="100%">
-						<Text size={size}>{label}</Text>
-						<Tooltip
-							multiline
-							width={120}
-							label={helpLabel}
-						>
-							<ActionIcon variant="transparent" size={"sm"}>
-								<HelpOutline size={size}/>
-							</ActionIcon>
-						</Tooltip>
+					<Flex
+						align="center"
+						justify="space-between"
+						{...flexProps}
+					>
+						  <Input.Label required={required} size={size}>{label}</Input.Label>
+						<HelpTooltip
+							size={size}
+							helpLabel={helpLabel}
+							toolTipProps={toolTipProps}
+							actionIconProps={actionIconProps}
+						/>
 					</Flex> : null
 			}
 		</>
 	);
 };
+
 export default InputHelpLabel;

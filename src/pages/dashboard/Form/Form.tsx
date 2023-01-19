@@ -8,17 +8,17 @@ import {
 
 import {
 	// RHFTextInput,
-	RHFTextArea,
 	RHFSwitch,
 	FormProvider,
 } from "@inprodi/core";
 import {
-	RHFPasswordInput,
+	RHFTextArea,
 	RHFTextInput,
 	RHFCheckbox,
 	RHFColorInput,
 	RHFDatePicker,
 	RHFDateRangePicker,
+	RHFPasswordInput,
 } from "components/global/hook-form";
 import { useToggle } from "@mantine/hooks";
 
@@ -67,7 +67,7 @@ const Form = () => {
 			<FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
 				<Grid gutter={45}>
 					<Grid.Col md={6}>
-						<Stack>
+						<Stack >
 							<h3>@inprodi/core</h3>
 							<Grid>
 								<Grid.Col span={12}>
@@ -75,25 +75,44 @@ const Form = () => {
 								</Grid.Col>
 								<Grid.Col md={6}>
 									<RHFTextInput
+										withAsterisk
 										name="textinpt"
-										label="Name"
-										help="Ayuda"
+										label="Normal"
+										help="Ayuda Ayuda Ayuda Ayuda"
 										placeholder="Placeholder"
 										size={size as MantineSize}
 									/>
+								</Grid.Col>
+								<Grid.Col md={6}>
 									<RHFTextInput
+										withAsterisk
 										name="textinpt2"
 										label="Name"
 										placeholder="placeholder"
 										size={size as MantineSize}
 										help="Ayuda sjdkhhjksdhjkfhjsgdahjgfdsahjghjgksdahg hjsdgghjsdghjf sgdfhjsadgfhjsa df sahjdfghjsadfg sajhdf hsjadfghjsad hjfdsgjhfgdshj fhjsadfgsdhagfhjsdagfhjsdagjhf ashdgf"
 									/>
+
 								</Grid.Col>
-								<Grid.Col md={6}>
-									<RHFPasswordInput name="password" label="Password" placeholder="placeholder" size={size as MantineSize} />
+								<Grid.Col span={6}>
+									<RHFPasswordInput
+										withAsterisk
+										name="password"
+										label="Password"
+										placeholder="placeholder"
+										size={size as MantineSize}
+									/>
+								</Grid.Col>
+								<Grid.Col span={6}>
+									<RHFPasswordInput withAsterisk name="password" label="Password" placeholder="placeholder" size={size as MantineSize} />
 								</Grid.Col>
 								<Grid.Col span={12}>
-									<RHFTextArea name="textArea" label="TextArea" size={size as MantineSize} />
+									<RHFTextArea
+										withAsterisk
+										name="textArea"
+										label="TextArea"
+										size={size as MantineSize}
+									/>
 								</Grid.Col>
 							</Grid>
 							<Button type="submit">Submit</Button>
