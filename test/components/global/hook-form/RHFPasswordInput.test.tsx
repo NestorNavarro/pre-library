@@ -73,7 +73,7 @@ describe("RHFPasswordInput.test", () => {
 			);
 		};
 
-		const { getByRole, getByLabelText } = render(
+		const { getByRole, getByLabelText, getByText  } = render(
 			<Provider>
 				<RHFPasswordInput label="labelTest" name="test" />
 			</Provider>
@@ -84,8 +84,7 @@ describe("RHFPasswordInput.test", () => {
 		const btn = getByRole("button");
 		await act( () => fireEvent.submit(btn));
 
-
-		expect(getByLabelText(labelError)).toBeTruthy();
+		expect(getByText(labelError)).toBeTruthy();
 	});
 	test("should has the error styles", async () => {
 		const onSubmit = jest.fn();

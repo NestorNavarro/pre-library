@@ -78,6 +78,7 @@ export const RHFPasswordInput = ({
 						{...field}
 						data-testid="password"
 						ref={ref}
+						name={name}
 						size={size}
 						error={error?.message}
 						autoComplete="off"

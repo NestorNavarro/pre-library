@@ -76,6 +76,7 @@ export const RHFTextArea = ({
 					<Textarea
 						{...field}
 						ref={ref}
+						name={name}
 						size={size}
 						error={error?.message}
 						autosize={autosize}

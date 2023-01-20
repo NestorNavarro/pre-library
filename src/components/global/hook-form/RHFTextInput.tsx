@@ -71,6 +71,7 @@ export const RHFTextInput = ({
 					<TextInput
 						{...field}
 						ref={ref}
+						name={name}
 						size={size}
 						error={error?.message}
 						withAsterisk={!showInputHelp ? withAsterisk : false}

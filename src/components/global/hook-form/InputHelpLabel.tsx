@@ -2,22 +2,22 @@ import { ReactNode }                           from "react";
 import { Flex, FlexProps, Input, MantineSize } from "@mantine/core";
 import HelpTooltip, { HelpTooltipProps }       from "./HelpTooltip";
 
-export interface InputHelpLabelProps extends Omit<HelpTooltipProps, "helpLabel"> {
+export interface InputHelpLabelProps extends Omit<HelpTooltipProps, "label">{
 	label : ReactNode;
     size ?: MantineSize;
 	required ?: boolean;
     helpLabel ?: ReactNode;
-	flexProps ?: FlexProps;
+	wrapperInputHelpLabel ?: FlexProps;
 }
 
 export const InputHelpLabel = ({
 	size,
 	label,
 	required,
-	flexProps,
+	wrapperInputHelpLabel,
 	helpLabel,
-	toolTipProps,
-	actionIconProps,
+	boxProps,
+	...rest
 } : InputHelpLabelProps) => {
 	return (
 		<>
@@ -26,14 +26,14 @@ export const InputHelpLabel = ({
 					<Flex
 						align="center"
 						justify="space-between"
-						{...flexProps}
+						{...wrapperInputHelpLabel}
 					>
 						  <Input.Label required={required} size={size}>{label}</Input.Label>
 						<HelpTooltip
 							size={size}
-							helpLabel={helpLabel}
-							toolTipProps={toolTipProps}
-							actionIconProps={actionIconProps}
+							label={helpLabel}
+							boxProps={boxProps}
+							{...rest}
 						/>
 					</Flex> : null
 			}

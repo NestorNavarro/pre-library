@@ -1,32 +1,29 @@
-import React, { ReactNode } from "react";
-import { HelpOutline }      from "@inprodi/icons";
+import React           from "react";
+import { HelpOutline } from "@inprodi/icons";
 import {
+	Box,
+	BoxProps,
 	Tooltip,
 	TooltipProps,
-	ActionIcon,
-	ActionIconProps,
 	MantineNumberSize,
 } from "@mantine/core";
 
-export interface HelpTooltipProps {
+export interface HelpTooltipProps extends Omit<TooltipProps, "children"> {
+	boxProps ?: Omit<BoxProps, "children">;
     size ?: MantineNumberSize;
-    helpLabel : ReactNode;
-	toolTipProps ?: TooltipProps;
-	actionIconProps ?: ActionIconProps;
 }
 
-const HelpTooltip = ({ helpLabel, toolTipProps, size, actionIconProps } : HelpTooltipProps) => {
+export const HelpTooltip = ({ boxProps, size, ...rest } : HelpTooltipProps) => {
 	return (
 		<Tooltip
 			multiline
 			maw={280}
-			label={helpLabel}
 			position="left-end"
-			{...toolTipProps}
+			{...rest}
 		>
-			<ActionIcon variant="transparent" size="sm" {...actionIconProps}>
+			<Box style={{ cursor : "pointer"}} {...boxProps}>
 				<HelpOutline size={size}/>
-			</ActionIcon>
+			</Box>
 		</Tooltip>
 	);
 };
