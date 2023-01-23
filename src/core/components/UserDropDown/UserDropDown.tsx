@@ -22,7 +22,7 @@ import { clearUserData } from "store/slice/authSlice";
 // path
 import { PATH_DASHBOARD } from "routes/paths";
 //icons
-import { Preferences } from "inprodi-icons";
+import { PreferencesOutline } from "@inprodi/icons";
 //our imports
 import styles from "./styles";
 
@@ -34,7 +34,7 @@ const UserDropDown = () => {
 
 	const navigate = useNavigate();
 
-	const handleNavigatePreference = () => navigate(PATH_DASHBOARD.home);
+	const handleNavigatePreference = () => navigate(PATH_DASHBOARD.root);
 
 	const logOut = () => dispatch(clearUserData());
 
@@ -76,7 +76,7 @@ const UserDropDown = () => {
 						Empresa
 					</Menu.Item>
 					<Menu.Item
-						icon={<Preferences fontSize={14} />}
+						icon={<PreferencesOutline size={14} />}
 						onClick={handleNavigatePreference}
 					>
 						Preferencias

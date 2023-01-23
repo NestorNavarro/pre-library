@@ -1,7 +1,3 @@
-const isProduction = import.meta.env.PROD;
+import { API_URL } from "../constants";
 
-const apiUrl = isProduction
-	? import.meta.env.VITE_API
-	: import.meta.env.VITE_API_LOCAL;
-
-export default apiUrl;
+export default API_URL;

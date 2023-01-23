@@ -29,7 +29,6 @@
     "babel-plugin-transform-import-meta": "^2.2.0",
     "dayjs": "^1.11.7",
     "fs": "^0.0.1-security",
-    "inprodi-icons": "^1.4.0",
     "localforage": "^1.10.0",
     "path": "^0.12.7",
     "qs": "^6.11.0",
