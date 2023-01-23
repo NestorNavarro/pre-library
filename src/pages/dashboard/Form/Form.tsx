@@ -7,18 +7,17 @@ import {
 } from "@mantine/core";
 
 import {
-	// RHFTextInput,
 	RHFSwitch,
-	FormProvider,
-} from "@inprodi/core";
-import {
 	RHFTextArea,
 	RHFTextInput,
+	FormProvider,
+	RHFPasswordInput,
+} from "@inprodi/core";
+import {
 	RHFCheckbox,
 	RHFColorInput,
 	RHFDatePicker,
 	RHFDateRangePicker,
-	RHFPasswordInput,
 } from "components/global/hook-form";
 import { useToggle } from "@mantine/hooks";
 
@@ -78,7 +77,6 @@ const Form = () => {
 										withAsterisk
 										name="textinpt"
 										label="Normal"
-										help="Ayuda Ayuda Ayuda Ayuda"
 										placeholder="Placeholder"
 										size={size as MantineSize}
 									/>
