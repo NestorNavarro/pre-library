@@ -5,9 +5,9 @@ import { PasswordInput, PasswordInputProps } from "@mantine/core";
 import { useFocusWithin }                    from "@mantine/hooks";
 
 //Own components
-import { ClosedEye, OpenedEye, Lock } from "inprodi-icons";
-import { getInptLabel }               from "helpers";
-import styles                         from "./styles";
+import { ClosedEyeOutline, OpenedEyeOutline, LockOutline } from "@inprodi/icons";
+import { getInptLabel }                                    from "helpers";
+import styles                                              from "./styles";
 
 interface IRHFPasswordInput extends PasswordInputProps, React.RefAttributes<HTMLInputElement> {
 	name : string;
@@ -34,7 +34,7 @@ const RHFPasswordInput = ({
 	};
 
 	const getVisibilityIcon = ({ reveal, size } : { reveal : boolean; size : number }) =>
-		reveal ? <ClosedEye fontSize={size} /> : <OpenedEye fontSize={size} />;
+		reveal ? <ClosedEyeOutline fontSize={size} /> : <OpenedEyeOutline fontSize={size} />;
 
 	return (
 		<Controller
@@ -47,7 +47,7 @@ const RHFPasswordInput = ({
 					id={name}
 					error={!!error}
 					autoComplete="off"
-					icon={<Lock fontSize={14} />}
+					icon={<LockOutline fontSize={14} />}
 					visibilityToggleIcon={getVisibilityIcon}
 					label={getInptLabel(label, error?.message)}
 					classNames={{

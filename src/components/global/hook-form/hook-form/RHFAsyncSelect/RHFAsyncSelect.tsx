@@ -10,8 +10,8 @@ import {
 import AsyncSelect from "react-select/async";
 //resources
 import {
-	X as ClearIcon,
-} from "inprodi-icons";
+	XOutline as ClearIcon,
+} from "@inprodi/icons";
 // store
 import { instanceApi } from "store/api/intanceApi";
 //mantine

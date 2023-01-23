@@ -2,8 +2,8 @@ import { useFormContext, Controller } from "react-hook-form";
 //mantiene
 import { Group, Rating, RatingProps, useMantineTheme, ActionIcon, Box, BoxProps } from "@mantine/core";
 //components
-import { Error, Label }  from "components/global/LabelInp";
-import { Octahedron, X } from "inprodi-icons";
+import { Error, Label }                 from "components/global/LabelInp";
+import { DiamondFilled, XOutline as X } from "@inprodi/icons";
 
 interface IRHFRating extends RatingProps {
 	name : string;
@@ -32,8 +32,8 @@ const RHFRating = ({
 
 	const defaultSize = size === undefined  ? theme.fontSizes.lg : mantineSizeToNum;
 
-	const defaultFullSymbol = fullSymbol ?? <Octahedron fontSize={defaultSize} color={theme.colors.primary[6]} />;
-	const defaultEmptySymbol = emptySymbol ?? <Octahedron fontSize={defaultSize} color={theme.colors.gray[3]} />;
+	const defaultFullSymbol = fullSymbol ?? <DiamondFilled fontSize={defaultSize} color={theme.colors.primary[6]} />;
+	const defaultEmptySymbol = emptySymbol ?? <DiamondFilled fontSize={defaultSize} color={theme.colors.gray[3]} />;
 
 	const cleanValue = (onChange: (...event: any[]) => void) => () => onChange(null);
 

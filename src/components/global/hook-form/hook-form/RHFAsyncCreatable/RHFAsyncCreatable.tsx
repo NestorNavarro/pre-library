@@ -9,10 +9,9 @@ import {
 } from "react-select";
 //resources
 import {
-	X as ClearIcon,
-	// DropdownIndicator as DropdownIcon,
-	Plus,
-} from "inprodi-icons";
+	XOutline as ClearIcon,
+	PlusOutline as Plus,
+} from "@inprodi/icons";
 // store
 import { instanceApi } from "store/api/intanceApi";
 //mantine

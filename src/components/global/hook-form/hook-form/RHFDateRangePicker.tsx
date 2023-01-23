@@ -5,7 +5,7 @@ import { Text } from "@mantine/core";
 //helpers
 import { getInptLabel }                          from "helpers";
 import { DateRangePicker, DateRangePickerProps } from "@mantine/dates";
-import { Calendar }                              from "inprodi-icons";
+import { CalendarOutline }                       from "@inprodi/icons";
 
 interface IRHFDateRangePicker extends DateRangePickerProps {
     name : string;
@@ -34,7 +34,7 @@ const RHFDateRangePicker = ({
 							locale="es"
 							inputFormat="DD-MM-YYYY"
 							placeholder={placeholder}
-							icon={<Calendar fontSize={16} />}
+							icon={<CalendarOutline fontSize={16} />}
 						/>
 					</div>
 				);

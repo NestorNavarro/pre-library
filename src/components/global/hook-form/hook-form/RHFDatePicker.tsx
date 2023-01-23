@@ -4,7 +4,7 @@ import { useFormContext, Controller } from "react-hook-form";
 //helpers
 import { getInptLabel }                from "helpers";
 import { DatePicker, DatePickerProps } from "@mantine/dates";
-import { Calendar }                    from "inprodi-icons";
+import { CalendarOutline }             from "@inprodi/icons";
 import styles                          from "./styles";
 
 interface IRHFDatePicker extends DatePickerProps {
@@ -41,7 +41,7 @@ const RHFDatePicker = ({
 						error={!!error}
 						inputFormat="DD-MM-YYYY"
 						placeholder={placeholder}
-						icon={<Calendar fontSize={16} />}
+						icon={<CalendarOutline fontSize={16} />}
 						{...rest}
 					/>
 				);

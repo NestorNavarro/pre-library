@@ -1,7 +1,7 @@
 import React                          from "react";
 import { useFormContext, Controller } from "react-hook-form";
 //icons
-import { Calendar } from "inprodi-icons";
+import { CalendarOutline } from "@inprodi/icons";
 //mantine
 import { Text } from "@mantine/core";
 //helpers
@@ -35,7 +35,7 @@ const RHFDateRangePicker = ({
 							locale="es"
 							inputFormat="DD-MM-YYYY"
 							placeholder={placeholder}
-							icon={<Calendar fontSize={16} />}
+							icon={<CalendarOutline size={16} />}
 						/>
 					</div>
 				);

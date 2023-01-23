@@ -1,9 +1,8 @@
 import React                          from "react";
 import { useFormContext, Controller } from "react-hook-form";
 //icons
-import { Calendar } from "inprodi-icons";
+import { CalendarOutline } from "@inprodi/icons";
 //helpers
-import { getInptLabel }                from "helpers";
 import { DatePicker, DatePickerProps } from "@mantine/dates";
 import styles                          from "./styles";
 
@@ -30,18 +29,18 @@ const RHFDatePicker = ({
 					<DatePicker
 						{...field}
 						locale="es"
-						label={getInptLabel(label, error?.message)}
+						label={label}
 						classNames={{
 							wrapper : `${error && classes.invalidWrapper}`,
 							invalid : classes.invalid,
 							icon    : classes.icon,
 							input   : classes.input,
-							label   : `${classes.label} ${error && classes.labelError}`,
+							label   : classes.label,
 						}}
-						error={!!error}
+						error={error?.message}
 						inputFormat="DD-MM-YYYY"
 						placeholder={placeholder}
-						icon={<Calendar fontSize={16} />}
+						icon={<CalendarOutline fontSize={16} />}
 						{...rest}
 					/>
 				);
